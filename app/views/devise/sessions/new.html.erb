@@ -1,0 +1,38 @@
+<!-- Astorolabe-->
+<!-- Promo Block -->
+<section class="u-promo-block u-promo-block--mheight-450 u-overlay u-overlay--dark text-white u-area-homePage">
+	<!-- Promo Content -->
+	<div class="container u-overlay__inner u-ver-center u-content-space">
+		<div class="row justify-content-center">
+			<div class="col-12">
+				<div class="text-center">
+					<h1 class="display-sm-4 display-lg-3">ログイン</h1>
+					<!--<p class="h6 text-uppercase u-letter-spacing-sm">星を見上げる様に、自分を見つめよう</p>-->
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Promo Content -->
+</section>
+<div class='signinPage'>
+  <div class='container'>
+    <h2 class="title">Astrolabeにログイン</h2>
+    <div class="text-center m-3">or</div>
+    <div class="text-center"><%= render "devise/shared/links" %></div>
+    <%= form_with scope: resource, as: resource_name, url: session_path(resource_name), html: { class: "mt-5, new_user" }, local: true do |f| %>
+      <div class="form-group">
+        <%= f.label :email %><br />
+        <%= f.email_field :email, autofocus: true, class: "form-control", autocomplete: "email", placeholder: "emailを入力してください" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :password %><br />
+        <%= f.password_field :password, class: "form-control", autocomplete: "off", placeholder: "パスワードを入力してください"  %>
+      </div>
+
+      <div class="form-group text-center">
+        <%= f.submit "ログイン", class: "loginBtn" %>
+      </div>
+    <% end %>
+  </div>
+</div>

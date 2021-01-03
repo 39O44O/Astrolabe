@@ -1,0 +1,121 @@
+
+.u-area-homePage {
+  background-image: url("../images/toppage/wil-stewart-QYFTkPFqzv4-unsplash.jpg");
+}
+
+/* Astrolabeとは */
+.u-area-product {
+  .u-article-image {
+    .u-astrolabe-image {
+      width: 100%;
+    }
+  }
+}
+
+/* 機能紹介 */
+.u-area-feature {
+  background-color: #0F4C81;
+  color: white;
+  .u-card-image {
+    width: 100%;
+  }
+}
+
+/* 導入 */
+.u-area-introduction {
+  background: url(../images/toppage/wil-stewart-QYFTkPFqzv4-unsplash.jpg) no-repeat bottom center;
+  background-size: cover;
+  .container {
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .ttl {
+    color: #fff;
+    font: 400 27px/1em 'futura PT', 'noto sans japanese',sans-serif;
+    letter-spacing: .04em;
+    margin: 20px 0 0;
+    padding: 0 0 0 40px;
+    position: relative;
+  }
+}
+
+
+
+/*----------------------------------
+  Promo Block v1
+------------------------------------*/
+.u-promo-block {
+  position: relative;
+  min-height: 100vh;
+  padding-top: 6.25rem;
+  padding-bottom: 6.25rem;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+}
+
+.u-promo-block--mheight-450 {
+  min-height: 450px;
+}
+
+.u-promo-block--mheight-500 {
+  min-height: 500px;
+}
+
+.u-promo-block--mheight-600 {
+  min-height: 600px;
+}
+
+@media (max-width: 1199px) {
+  .u-promo-block {
+    background-attachment: fixed;
+  }
+}
+
+/*----------------------------------
+  Overlays
+------------------------------------*/
+.u-overlay {
+  position: relative;
+}
+
+.u-overlay::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.u-overlay--dark::after {
+  background-color: rgba(27, 30, 36, 0.3);
+}
+
+.u-overlay--light::after {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.u-overlay__inner {
+  position: relative;
+  z-index: 1;
+}
+
+/*----------------------------------
+  Spaces
+------------------------------------*/
+.u-content-space {
+  padding-top: 6.25rem;
+  padding-bottom: 6.25rem;
+}
+
+.u-content-space-top {
+  padding-top: 6.25rem;
+}
+
+.u-content-space-bottom {
+  padding-bottom: 6.25rem;
+}

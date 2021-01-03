@@ -1,0 +1,73 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container-fluid">
+    
+    <% if current_user %>
+      <div class="area_logo_header">
+        <i class="fas fa-star-of-david" style="color: white;"></i>
+        <%= link_to "Astrolabe", "#", class: "navbar-brand" %>
+      </div>
+    <% else %>
+      <div class="area_logo_header">
+        <i class="fas fa-star-of-david" style="color: white;"></i>
+        <%= link_to "Astrolabe", root_path, class: "navbar-brand" %>
+      </div>
+    <% end %>
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-md-auto align-items-center">
+        <% if current_user %>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle active" data-toggle="dropdown">
+              <%= current_user.name %>さん
+            </a>
+            <ul class="dropdown-menu dropdown-menu-right text-center">
+              <!--<li class="dropdown-item">-->
+              <!--  <%#= link_to user_path(@user), class: "nav-item nav-link" do %>-->
+              <!--    <span class="<%#= 'active' if current_page?(user_path(@user)) %>">-->
+              <!--      <i class="fas fa-user fa-lg inherit"></i>-->
+              <!--      プロフィール-->
+              <!--    </span>-->
+              <!--  <#% end %>-->
+              <!--</li>-->
+              <li>
+                <%= link_to top_menu_path, class: "nav-link text-dark" do %>
+                  <i class="fas fa-star"></i>
+                  <span class="mr-1 ">メニュー</span>
+                <% end %>
+              </li>
+              <li class="dropdown-divider"></li>
+              <li>
+                <%= link_to new_list_path, class: "nav-link text-dark" do %>
+                  <i class="fas fa-edit"></i>
+                  <span class="mr-1 ">リストを作成</span>
+                <% end %>
+              </li>
+              <li>
+                <%= link_to destroy_user_session_path, method: :delete, class: "nav-link text-dark" do %>
+                  <i class="fas fa-sign-out-alt"></i>
+                  <span class="mr-1 ">サインアウト</span>
+                <% end %> 
+              </li>
+            </ul>
+          </li>
+        
+        <% else %>
+          <li class="nav-item active">
+            <%= link_to '新規登録', new_user_registration_path, class: 'nav-link' %>
+          </li>
+          <li class="nav-item active">
+            <%= link_to 'ログイン', new_user_session_path, class: 'nav-link' %>
+          </li>
+          <li class="nav-item active">
+  					<a class="nav-link" href="#">ゲスト</a>
+  				</li>
+        <% end %>
+      
+      </ul>
+    </div>
+  </div>
+</nav>

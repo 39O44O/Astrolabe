@@ -1,0 +1,117 @@
+	<main>
+		<!-- Astorolabe-->
+		<!-- Promo Block -->
+		<section class="u-promo-block u-promo-block--mheight-600 u-overlay u-overlay--dark text-white u-area-homePage">
+			<!-- Promo Content -->
+			<div class="container u-overlay__inner u-ver-center u-content-space">
+				<div class="row justify-content-center">
+					<div class="col-12">
+						<div class="text-center">
+							<h1 class="display-sm-4 display-lg-3">Astrolabe</h1>
+							<p class="h6 text-uppercase u-letter-spacing-sm">星を見上げる様に、自分を見つめよう</p>
+							<button type="button" class="btn btn-primary">はじめる<i class="fas fa-arrow-alt-circle-right ml-2"></i></button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- End Promo Content -->
+		</section>
+
+		<!-- Astrolabeとは -->
+		<section class="u-content-space u-area-product">
+			<div class="container">
+				<div class="row">
+					<!-- Article Content -->
+					<div class="col-lg-6 align-self-center mb-5 mb-lg-0 pr-lg-5">
+						<header class="mb-5">
+							<h2 class="h1">Astorolabeとは</h2>
+						</header>
+						<p class="h6">これまでやってきた事や考えたことを一目で見る事が出来て、<br>まだ見ぬ新しい目的地へ目指す事が出来る自己分析アプリです。</p>
+						<p class="h6 mb-4">中世の天文学者や占星術師が星を観測する為に使っていた、<br>天体観測機器である「アストロラーベ」が由来となっています。</p>
+					</div>
+					<!-- End Article Content -->
+
+					<!-- Article Image -->
+					<div class="col-lg-6 align-self-center u-article-image">
+						<%= image_pack_tag "media/images/toppage/astrolabe.jpg", class: 'u-astrolabe-image' %>
+					</div>
+					<!-- End Article Image -->
+				</div>
+			</div>
+		</section>
+		<!-- End Our Product -->
+
+		<!-- 機能紹介 -->
+		<section class="u-content-space u-area-feature">
+			<div class="container">
+				<header class="text-center w-md-50 mx-auto mb-8">
+					<h2 class="h1 mb-3">機能紹介</h2>
+					<!--<p class="h5">コメント</p>-->
+				</header>
+
+				<!-- Row -->
+				<div class="row">
+
+					<div class="col-lg-4 mb-5 mb-lg-0">
+						<div class="display-4 text-primary mb-2">
+						  <%= image_pack_tag "media/images/toppage/undraw_design_notes_8dmv.png", class: 'u-card-image' %>
+						</div>
+						<h4 class="h5 text-center">プロフィールサマリー機能</h4>
+						<p>一枚で、自分のプロフィール画面を作成する機能です。PDFで作成する事が可能で、自己紹介スライドとして使う事が出来ます。</p>
+						<!--<a href="#!">-->
+						<!--          Learn More <i class="fas fa-arrow-right ml-1"></i>-->
+						<!--        </a>-->
+					</div>
+
+					<div class="col-lg-4 mb-5 mb-lg-0">
+						<div class="display-4 text-primary mb-2">
+							<%= image_pack_tag "media/images/toppage/undraw_detailed_analysis_xn7y.png", class: 'u-card-image' %>
+						</div>
+						<h4 class="h5 text-center">プロフィール詳細機能</h4>
+						<p>より詳細に、自分の事を分析・表記する機能です。性格チャート、モチベーショングラフ、技術レベルなど、視覚的に表すことが出来ます。</p>
+						<h4 class="h5 text-center">次回実装予定</h4>
+						<!--<a href="#!">-->
+						<!--          Learn More <i class="fas fa-arrow-right ml-1"></i>-->
+						<!--        </a>-->
+					</div>
+
+					<div class="col-lg-4 mb-5 mb-lg-0">
+						<div class="display-4 text-primary mb-2">
+							<%= image_pack_tag "media/images/toppage/undraw_Taking_notes_re_bnaf.png", class: 'u-card-image' %>
+						</div>
+						<h4 class="h5 text-center">自己分析機能</h4>
+						<p>質問や、その解答を看板形式で纏めておく事が出来る機能です。自己分析や面接対策として使う事が出来ます。</p>
+						<!--<a href="#!">-->
+						<!--          Learn More <i class="fas fa-arrow-right ml-1"></i>-->
+						<!--        </a>-->
+					</div>
+
+				</div>
+				<!-- End Row -->
+			</div>
+		</section>
+
+		<!-- 導入 -->
+		<section class="u-area-introduction">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-12 text-center">
+						<div class="head_home mb-3">
+							<h2 class="ttl text-white">さあ、はじめよう</h2>
+						</div>
+						<div class="body_home">
+							<div class="active m-4">
+            		<%= link_to '新規登録', new_user_registration_path, class: 'submitBtn' %>
+         		  </div>
+         		  <div class="active m-4">
+            		<%= link_to 'ログイン', new_user_session_path, class: 'submitBtn' %>
+          	 	</div>
+          		<div class="active m-4">
+  							<a class="guest" href="#">ゲスト</a>
+  						</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>

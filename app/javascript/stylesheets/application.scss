@@ -1,0 +1,28 @@
+@import '~bootstrap/scss/bootstrap';
+
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+
+@import "custom";
+
+@import "list/new";
+
+@import "list/edit";
+
+@import "top";
+
+@import "card/new";
+
+@import "card/show";
+
+@import "card/edit";
+
+@import "home";
+
+@import "layouts/navbar";
+
+@import "users/show";
+
+@import "users/edit";
+
+// Bootstrapのprimaryカラーの変更
+@import "color";
