@@ -35,7 +35,7 @@ rails 6.1.0  　　
 
 webpacker  
 
-devise：サインアップ・サインインをするための機能
+devise:サインアップ・サインインをするための機能
 
 carrierwave:ファイルアップロードするための機能
 
@@ -59,7 +59,7 @@ mini_magick:画像加工してくれる機能
 ~~注意点などがあれば書く~~
 
 # Author
-GitHub[39O44O](https://github.com/39O44O)
+GitHub:[39O44O](https://github.com/39O44O)
 
 # License
 This software is released under the MIT License.
