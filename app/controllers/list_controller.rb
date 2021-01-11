@@ -9,7 +9,7 @@ class ListController < ApplicationController
   def create
     @list = List.new(list_params)
     if @list.save
-      redirect_to :root
+      redirect_to :top_index
     else
       render action: :new
     end
@@ -20,7 +20,7 @@ class ListController < ApplicationController
 
   def update
     if @list.update(list_params)
-      redirect_to :root
+      redirect_to :top_index
     else
       render action: :edit
     end
@@ -28,7 +28,7 @@ class ListController < ApplicationController
 
   def destroy
     @list.destroy
-    redirect_to :root
+    redirect_to :top_index
   end
 
   private
