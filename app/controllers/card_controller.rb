@@ -10,7 +10,7 @@ class CardController < ApplicationController
   def create
     @card = Card.new(card_params)
     if @card.save
-      redirect_to :root
+      redirect_to :top_index
     else
       render action: :new
     end
@@ -25,7 +25,7 @@ class CardController < ApplicationController
   
   def update
     if @card.update(card_params)
-      redirect_to :root
+      redirect_to :top_index
     else
       render action: :edit
     end
@@ -33,7 +33,7 @@ class CardController < ApplicationController
   
   def destroy
     @card.destroy
-    redirect_to :root
+    redirect_to :top_index
   end
 
   private
