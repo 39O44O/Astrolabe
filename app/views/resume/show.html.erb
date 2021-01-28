@@ -1,0 +1,106 @@
+<section>
+<!--<section class="u-content-space u-area-product">-->
+ 
+	<main>
+  	<div class="container">
+  	  <div class="card">
+        <div class="card-header">
+          <h2 class="h3 card-header-title text-center">自己紹介</h2>
+  		  </div>
+  		    <div class="row">
+  			    <!-- Left Content-->
+            <div class="col-lg-6">
+              <div class="card">
+                
+                <div class="card-header">
+                  <h5 class="h5 card-header-title">ふりがな</h5>
+                </div>
+                <div class="card-body">
+                  <p class="h5 card-text">はじめ</p>
+                </div>
+                
+                <div class="card-header">
+                  <h5 class="h5 card-header-title">名前</h5>
+                </div>
+                <div class="card-body">
+                  <%= @resume.name %>
+                </div>
+                
+                <div class="card-header">
+                  <h5 class="h5 card-header-title">About me</h5>
+                </div>
+                <div class="card-body">
+                  <p class="h5 card-text">エジソン株式会社</p>
+                  <%#= @resume.about_me %>
+                </div>
+                
+                <div class="card-header">
+                  <h5 class="h5 card-header-title">Carrear</h5>
+                </div>
+                <div class="card-body">
+                  <p class="h5 card-text">2000年帝国大學経済学部卒業<br>2001年エジソン株式会社　入社</p>
+                </div>
+              
+              </div>
+            </div>
+            <!-- End Left Content --> 
+  			
+      			<!-- Right Content-->
+        		<div class="col-lg-6">
+        		  <div class="card">
+        			<div class="container profile">
+          		  <div class="row">
+          			  <!-- Resume Image -->
+          			  <div class="col-6 my-3">
+            			  <%# if @resume.profile_image.url.nil? %>
+                      <div class="profile-default-img"></div>
+                    <%# else %>
+                      <%#= image_tag @resume.profile_image.url, class: "profile-img" %>
+                    <%# end %>
+          			 </div>
+          			    
+                  <div class="col-6 my-3">
+            			  <%# if @resume.profile_image.url.nil? %>
+                      <div class="profile-default-img"></div>
+                    <%# else %>
+                      <%#= image_tag @resume.profile_image.url, class: "profile-img" %>
+                    <%# end %>
+          			  </div>
+          			    
+          		  </div>
+          		</div>
+        			 
+              <div class="card-header">
+                <h5 class="h5 card-header-title">Skill</h5>
+              </div>
+              <div class="card-body">
+                <p class="h5 card-text">アイデア出し<br>アウトプットする能力</p>
+              </div>
+                
+              <div class="card-header">
+                <h5 class="h5 card-header-title">Hobby</h5>
+              </div>
+              <div class="card-body">
+                <p class="h5 card-text">発明をすること<br>特許を取ること</p>
+              </div>
+    
+      			<!-- End Right Content -->
+      			</div>
+  			</div>
+  
+  		</div>
+  	</div>
+	</main>
+	
+	<div class ="fixed_btn">
+  	<% if current_user.id == @user.id %>
+      <div class="user-action-common">
+        <%= link_to edit_resume_path do %>
+          <i class="fas fa-pencil-alt fa-2x"></i>
+        <% end %>
+        <p class ="text-center">編集<span>
+      </div>
+    <% end %>
+  </div>
+  
+</section>

@@ -35,3 +35,15 @@
   </div>
 </div>
 
+
+	<div class ="fixed_btn">
+  	<% #if current_user.id == @user.id %>
+        <div class="user-action-common">
+          <%= link_to new_list_path do %>
+            <i class="fas fa-edit fa-2x"></i>
+          <% end %>
+          <p class ="text-center">リストを作成</p>
+        </div>
+      </div>
+    <% #end %>
+  </div>

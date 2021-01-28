@@ -10,7 +10,7 @@ class CardController < ApplicationController
   def create
     @card = Card.new(card_params)
     if @card.save
-      redirect_to :top_index
+      redirect_to :top_menu
     else
       render action: :new
     end
